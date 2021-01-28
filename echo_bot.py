@@ -1,6 +1,6 @@
 import telebot, sys, requests, json
 
-bot = telebot.TeleBot("1667967944:AAHXEmCF0CaP6mUtqAg9S6xuIrZv5j9s0Rc", parse_mode=None)
+bot = telebot.TeleBot(Token, parse_mode=None)
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
 	bot.reply_to(message, "Boas, e ti de quen ves sendo?")
