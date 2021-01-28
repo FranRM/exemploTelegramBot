@@ -1,6 +1,9 @@
 import telebot, sys, requests, json
 
+# Definición del bot.
 bot = telebot.TeleBot(Token, parse_mode=None)
+
+# Definicion de las funciones mediante comandos del bot.
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
 	bot.reply_to(message, "Boas, e ti de quen ves sendo?")
@@ -21,6 +24,7 @@ def send_pepitas(message):
 def send_pepitas(message):
 	bot.send_message("-578948572","Hola @Femio23 en GrupoBot")
 
+# Función de reenvio de los mensajes al propietario de todos los mensajes recibidos por el bot.
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
 	nome=message.from_user.username
